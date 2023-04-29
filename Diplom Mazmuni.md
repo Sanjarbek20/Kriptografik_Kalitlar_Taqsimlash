@@ -1,0 +1,2 @@
+# Kriptografik_Kalitlar_Taqsimlash
+Diplom_ishi
