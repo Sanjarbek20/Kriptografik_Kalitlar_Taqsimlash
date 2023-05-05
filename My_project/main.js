@@ -8,6 +8,7 @@ const numbersEl = document.querySelector("#numbers");
 const symbolsEl = document.querySelector("#symbols");
 const generateEl = document.querySelector("#generate");
 const clipboard = document.querySelector("#clipboard");
+const RSAresult = document.querySelector("#RSAresult");
 
 var randomFunc = {
 	upper: getRandomUpper,
