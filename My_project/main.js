@@ -99,3 +99,18 @@ function getRandomSymbol() {
 	const symbols = "!@#$%^&*(){}[]=<>/,.";
 	return symbols[Math.floor(Math.random() * symbols.length)];
 }
+
+let bir = 0;
+
+function copiedResultKey() {
+	const textarea = document.createElement("textarea");
+	const password = resultEl.innerText;
+	textarea.value = password;
+	document.body.appendChild(textarea);
+	textarea.select();
+	document.execCommand("copy");
+	textarea.remove();
+	alert("Password copied to clipboard");
+}
+
+RSAresult.addEventListener("click", copiedResultKey);
