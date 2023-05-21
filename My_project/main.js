@@ -9,6 +9,23 @@ const symbolsEl = document.querySelector("#symbols");
 const generateEl = document.querySelector("#generate");
 const clipboard = document.querySelector("#clipboard");
 const RSAresult = document.querySelector("#RSAresult");
+const rsaKeys = document.getElementById("rsaKeys");
+const choose_way = document.getElementsByClassName("choose_way");
+const waysRsa = document.querySelector("#ways");
+const rsaEnc = document.querySelector("#rsaEnc");
+const rsaDenc = document.querySelector("#rsaDenc");
+
+// bu joydan rsa shiflashlash oynasiniki
+const shifrlash = document.querySelector("#shifrlash");
+const EncSubmit = document.querySelector("#EncSubmit");
+const tubP = document.querySelector("#p");
+const tubQ = document.querySelector("#p");
+const EncText = document.querySelector("#EncText");
+
+// deshifrlash uchun sectorlar
+const deshifrlash = document.querySelector("#deshifrlash");
+
+console.log(choose_way);
 
 var randomFunc = {
 	upper: getRandomUpper,
@@ -114,3 +131,32 @@ function copiedResultKey() {
 }
 
 RSAresult.addEventListener("click", copiedResultKey);
+
+// rsa keys function starting
+
+rsaKeys.addEventListener("click", () => {
+	// choose_way.style.display = "block";
+
+	waysRsa.style.display = "block";
+	console.log(choose_way);
+	console.log("assa");
+});
+
+rsaEnc.addEventListener("click", () => {
+	// choose_way.style.display = "block";
+
+	shifrlash.style.display = "block";
+
+	deshifrlash.style.display = "none";
+});
+
+rsaDenc.addEventListener("click", () => {
+	// choose_way.style.display = "block";
+
+	deshifrlash.style.display = "block";
+	shifrlash.style.display = "none";
+
+	console.log(shifrlash);
+	console.log("assa");
+});
+EncSubmit.addEventListener("click", () => {});

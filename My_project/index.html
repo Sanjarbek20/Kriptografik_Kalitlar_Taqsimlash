@@ -59,30 +59,63 @@
 						<input type="checkbox" id="symbols" checked />
 					</div>
 				</div>
-				<button class="btn btn-large" id="generate">Generate password</button> <br>
-				
-					<button class="btn btn-large" id="RSAresult" >
+				<button class="btn btn-large" id="generate">Generate password</button>
+				<br />
+
+				<button class="btn btn-large" id="RSAresult">
 					<!-- <a href="./rsa.html" 
 					target="_self"
 					>RSA shifrlash</a> -->
 					RSA
-					</button>
+				</button>
 			</div>
 		</div>
 
-
-		
+		<!-- rsa starting part -->
 		<div class="right-section">
-			<div class="needToPassword">
-				<div class="result-container">
-					<span id="RSAresult"></span>
-					<button class="btn" id="clipboard">
-						<i class="far fa-clipboard"></i>
-					</button>
-					
-					<input type="text" class="RsaArea" id="RsaArea">
+			<button class="btn" id="rsaKeys">RSA KEYS</button>
+
+			<div class="choose_way" id="ways">
+				<button class="btn" id="rsaEnc">RSA ENC</button>
+				<button class="btn" id="rsaDenc">RSA DENC</button>
+
+				<br />
+				<div class="shifrlash" id="shifrlash">
+					<br />
+					<label for="EncText"> Shiflanadigan matnni kiriting:</label><br />
+					<input type="text" class="" id="EncText" /><br /><br />
+					<label for="p">P uchun tub sonni kiriting:</label><br />
+					<input type="text" id="p" /><br /><br />
+
+					<label for="q">Q uchun tub sonni kiriting:</label><br />
+					<input type="text" id="q" /><br /><br />
+					<br />
+					<button type="submit" id="EncSubmit" class="btn">Submit</button>
+					<br />
+					<br />
+					<label for="EncResultArea">Shifr matn </label><br />
+					<input type="text" id="EncResultArea" />
+				</div>
+				<div class="deshifrlash" id="deshifrlash">
+					<br />
+					<label for="EncText"> Shifr matnni kiriting:</label><br />
+					<input type="text" class="" id="EncText" /><br /><br />
+					<label for="b">B uchun tub sonni kiriting:</label><br />
+					<input type="text" id="B" /><br /><br />
+
+					<label for="d">D uchun tub sonni kiriting:</label><br />
+					<input type="text" id="d" /><br /><br />
+					<br />
+					<button type="submit" id="EncSubmit" class="btn">Submit</button>
+					<br />
+					<br />
+					<label for="EncResultArea">Shifr matn </label><br />
+					<input type="text" id="EncResultArea" />
+				</div>
 			</div>
 		</div>
+
+		<!-- rsa finishing part -->
 	</body>
 	<script text="text/javascript" src="main.js"></script>
 </html>
