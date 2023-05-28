@@ -64,7 +64,8 @@ if ord(S)==65 :
         if (ord(s[i])<96): d=ord(s[i])-64
         else: d=ord(s[i])-96
         b=d**e%m
-        #chrb.append(chr(b))
+        chrb.append((b))
+        print(chrb)
         print(chr(b),end='')
     
 elif ord(S)==68:

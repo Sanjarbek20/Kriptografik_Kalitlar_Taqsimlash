@@ -3,3 +3,134 @@
 * {
 	box-sizing: border-box;
 }
+
+body {
+	background-color: #f8f8f8;
+	color: #fff;
+	display: flex;
+	font-family: "Muli", sans-serif;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	/* min-height: 100vh; */
+	background-image: url(../imagesAndGifs/circle-5090539_1920.jpg);
+	background-size: cover;
+}
+
+.result-container .btn {
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.btn {
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 8px 12px;
+	background-color: #2175c4;
+	border-radius: 8px;
+}
+
+.btn-large {
+	display: block;
+	width: 100%;
+}
+
+.btn-large a {
+	text-decoration: none;
+	color: #fff;
+}
+
+@media screen and (max-width: 400px) {
+	.result-container {
+		font-size: 14px;
+	}
+	h1 {
+		font-size: 25px;
+		text-align: center;
+	}
+}
+
+.choose_way {
+	display: none;
+	/* text-align: center; */
+	/* display: flex;
+		justify-content: center; */
+
+	width: 300px;
+	height: max-content;
+	background-color: green;
+	padding: 2em 2.7em 1em 1em;
+	/* margin-top: 15em; */
+}
+
+.shifrlash {
+	display: none;
+}
+
+.shifrlash > input {
+	width: 20em;
+	margin: 0.5em auto 1em;
+	height: 3em;
+	font-weight: 500;
+}
+
+.shifrlash > button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
+
+/* deshifrlash */
+
+.deshifrlash {
+	display: none;
+}
+
+.deshifrlash > input {
+	width: 20em;
+	margin: 0.5em auto 1em;
+	height: 3em;
+}
+
+#d {
+	display: none;
+	width: 20em;
+	height: 15em;
+	cursor: pointer;
+}
+#tubsonlar,
+#EncResultArea {
+	display: block;
+	width: 20em;
+	height: 15em;
+	margin: 0 auto 1em;
+}
+
+#tubsonlarParagraph {
+	display: none;
+}
+
+#functionE {
+	display: block;
+}
+
+/* funtion d starting */
+#funtionD {
+	/* display: none; */
+	position: absolute;
+	left: 1em;
+	top: 1em;
+}
+
+#functionEinput,
+#functionEinputParag {
+	display: block;
+}
