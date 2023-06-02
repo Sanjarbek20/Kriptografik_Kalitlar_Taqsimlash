@@ -14,12 +14,21 @@ const tubP = document.querySelector("#p");
 const tubQ = document.querySelector("#q");
 const EncText = document.querySelector("#EncText");
 
+// e uchun input soha
+const functionEinput = document.querySelector("#functionEinput");
+
 // console.log(EncText);
 // deshifrlash uchun sectorlar
 const deshifrlash = document.querySelector("#deshifrlash");
-const functionEinput = document.querySelector("#functionEinput");
+const forDencText = document.querySelector("#forDencText");
+const inputD = document.querySelector("#inputD");
+const bInput = document.querySelector("#bInput");
 
-console.log(choose_way);
+// console.log(choose_way);
+
+let tubPValue = Number(tubP.value);
+let tubQValue = Number(tubQ.value);
+let Multiple = tubQValue * tubPValue;
 
 // rsa keys function starting
 
@@ -27,6 +36,7 @@ rsaKeys.addEventListener("click", () => {
 	// choose_way.style.display = "block";
 
 	waysRsa.style.display = "block";
+	rsaKeys.style.display = "none";
 
 	console.log(choose_way);
 	console.log("assa");
@@ -60,11 +70,37 @@ rsaEnc.addEventListener("click", () => {
 });
 
 rsaDenc.addEventListener("click", () => {
-	// choose_way.style.display = "block";
-
 	deshifrlash.style.display = "block";
 	shifrlash.style.display = "none";
 	rsaKeys.style.display = "none";
+
+	DencSubmit.addEventListener("click", () => {
+		let DencTextValue = forDencText.value;
+		let DencInput = DencTextValue.toString();
+		let DencArray = DencInput.split("");
+
+		let inputDValue = Number(inputD.value);
+
+		let dencFinalResult = [];
+		for (let i = 0; i < DencArray.length; i++) {
+			let homeDenc = DencArray[i].charCodeAt();
+			let dencNumber = homeDenc ** inputDValue % Number(bInput.value);
+			console.log(dencNumber, homeDenc, inputDValue);
+			// let dc = String.fromCharCode(dencNumber);
+			dencFinalResult.push(dencNumber + 64);
+
+			// console.log(String.fromCharCode(dencNumber + 64));
+		}
+
+		let dencFinalResultArray = [];
+		for (y of dencFinalResult) {
+			let messageDenc = String.fromCharCode(y);
+			dencFinalResultArray.push(messageDenc);
+		}
+		let x = dencFinalResultArray.join("");
+		console.log(x[0]);
+		document.getElementById("dencResultArea").innerHTML = x;
+	});
 
 	funcD.addEventListener("mouseup", () => {
 		document.getElementById("d").style.display = "block";
@@ -198,4 +234,6 @@ EncSubmitFinal.addEventListener("click", () => {
 	}
 	console.log(funcZd);
 	document.getElementById("d").innerHTML = funcZd;
+
+	document.getElementById("b").innerHTML = Multiple;
 });

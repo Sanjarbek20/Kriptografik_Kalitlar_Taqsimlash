@@ -22,8 +22,10 @@
 			<button class="btn" id="rsaKeys">RSA KEYS</button>
 
 			<div class="choose_way" id="ways">
-				<button class="btn" id="rsaEnc">RSA ENC</button>
-				<button class="btn" id="rsaDenc">RSA DENC</button>
+				<div class="main-btns">
+					<button class="btn" id="rsaEnc">RSA ENC</button>
+					<button class="btn" id="rsaDenc">RSA DENC</button>
+				</div>
 
 				<br />
 				<div class="shifrlash" id="shifrlash">
@@ -55,24 +57,30 @@
 				</div>
 				<div class="deshifrlash" id="deshifrlash">
 					<br />
-					<label for="EncText"> Shifr matnni kiriting:</label><br />
-					<input type="text" class="" id="EncText" /><br /><br />
+					<label for="forDencText"> Shifr matnni kiriting:</label><br />
+					<input type="text" class="" id="forDencText" /><br /><br />
 
-					<label for="b">B uchun tub sonni kiriting:</label><br />
-					<input type="text" id="B" /><br /><br />
+					<label for="b" id="">B uchun tub sonni kiriting:</label><br />
+					<input type="text" id="bInput" /><br /><br />
 
 					<div id="funtionD">
 						<p id="funcD">D uchun qiymat</p>
 						<textarea id="d"></textarea>
+						<p id="funcB">Q P uchun qiymat</p>
+						<textarea id="b"></textarea>
 					</div>
 					<label for="d">D uchun tub sonni kiriting:</label><br />
 					<input type="text" id="inputD" /><br /><br />
 					<br />
-					<button type="submit" id="DencSubmit" class="btn">Submit</button>
+					<div class="main-btns">
+						<button type="submit" id="DencSubmit" class="btn">Submit</button>
+					</div>
+
 					<br />
 					<br />
-					<label for="EncResultArea">DeShifrlangan matn </label><br />
-					<input type="text" id="EncResultArea" />
+					<label for="dencResultArea">DeShifrlangan matn </label><br />
+					<textarea id="dencResultArea"></textarea>
+					<!-- <input type="text" id="dencResultArea" /> -->
 				</div>
 			</div>
 		</div>

@@ -14,8 +14,9 @@ body {
 	justify-content: center;
 	padding: 10px;
 	/* min-height: 100vh; */
-	background-image: url(../imagesAndGifs/circle-5090539_1920.jpg);
-	background-size: cover;
+	/* background-image: url(../imagesAndGifs/circle-5090539_1920.jpg);
+	background-size: cover; */
+	background: linear-gradient(90deg, red, blue);
 }
 
 .result-container .btn {
@@ -57,6 +58,11 @@ body {
 	}
 }
 
+.main-btns {
+	text-align: center;
+	padding-left: 1em;
+}
+
 .choose_way {
 	display: none;
 	/* text-align: center; */
@@ -65,9 +71,10 @@ body {
 
 	width: 300px;
 	height: max-content;
-	background-color: green;
+	/* background-color: green; */
 	padding: 2em 2.7em 1em 1em;
 	/* margin-top: 15em; */
+	box-shadow: 5px 5px 55px #f8f8f8;
 }
 
 .shifrlash {
@@ -101,11 +108,19 @@ body {
 }
 
 #d {
-	display: none;
+	display: block;
 	width: 20em;
 	height: 15em;
 	cursor: pointer;
 }
+
+#b,
+#dencResultArea {
+	display: block;
+	width: 20em;
+	cursor: pointer;
+}
+
 #tubsonlar,
 #EncResultArea {
 	display: block;

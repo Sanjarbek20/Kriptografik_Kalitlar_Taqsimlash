@@ -16,8 +16,9 @@ body {
 	justify-content: center;
 	padding: 10px;
 	/* min-height: 100vh; */
-	background-image: url(../imagesAndGifs/circle-5090539_1920.jpg);
+	/* background-image: url(../imagesAndGifs/circle-5090539_1920.jpg); */
 	background-size: cover;
+	background: linear-gradient(90deg, red, blue);
 }
 
 .left-section {
@@ -58,7 +59,7 @@ input[type="checkbox"] {
 
 .container {
 	background-color: cadetblue;
-	box-shadow: 3px 2px 10px rgba(63, 29, 29, 0.2);
+	box-shadow: 5px 12px 20px white;
 	padding: 20px;
 	width: 300px;
 	max-width: 100%;
