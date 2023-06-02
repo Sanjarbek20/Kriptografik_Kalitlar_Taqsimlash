@@ -192,7 +192,6 @@ EncSubmitFinal.addEventListener("click", () => {
 	// e input malumotlar
 
 	let functionEinputValue = functionEinput.value;
-
 	// matematikasini hisoblash
 	let tubPValue = Number(tubP.value);
 	let tubQValue = Number(tubQ.value);
@@ -207,10 +206,8 @@ EncSubmitFinal.addEventListener("click", () => {
 			d = EncArray[i].charCodeAt() - 96;
 			console.log(d);
 		}
-
 		b = d ** functionEinputValue % Multiple; // console.log(b);
 		let resultShifrMatn = String.fromCharCode(b);
-
 		text.push(b);
 	}
 
